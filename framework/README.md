@@ -2,8 +2,6 @@
 
 The router framework consists of a P4 data plane (`data_plane`) and a Python control plane (`control_plane`). Both the data plane and the control plane are built around a stacked module design. Our current implementation contains the following modules: L2 forwarding, L3 routing, ARP, authentication, device management, access control, connection filtering, and MUD. Additional debugging and usability modules include the CLI and monitoring modules. 
 
-![Router Modules](./modules.png "Router Framework Modules")
-
 The idea behind the modular architecture is to encapsulate more and more functionalities using different module, thereby reducing complexity of each module and improving scalability.
 
 ## Overview Control Plane

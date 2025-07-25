@@ -12,7 +12,7 @@ If you use any portion of our work, please cite our paper:
 @inproceedings{2025_fink_p4ward,
     author = {Fink, Ina Berenice and Koehler, William and Serror, Martin and Wehrle, Klaus},
     title = {{Fine-Grained Behavioral Policy Enforcement for Industrial Networks}},
-    booktitle = {Proceedings of the 50th IEEE Conference on Local Computer Network (LCN '25), Oct 14-16, 2025, Sydney, Australia},
+    booktitle = {Proceedings of the 50th IEEE Conference on Local Computer Networks (LCN '25), Oct 14-16, 2025, Sydney, Australia},
     year = {2025},
     publisher = {IEEE},
 }
