@@ -1,0 +1,1920 @@
+{
+    "ietf-mud:mud": {
+        "mud-version": 1,
+        "mud-url": "https://comsys.rwth-aachen.de/performance/mud/test-3.json",
+        "last-update": "2024-03-05T10:00:00+00:00",
+        "cache-validity": 48,
+        "is-supported": true,
+        "systeminfo": "Test Client Device",
+        "controller-name": "rwth-aachen:comsys:evaluation:perf:mud:test",
+        "extensions": [
+            "modbus",
+            "opcua"
+        ],
+        "from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "from-acl-modbus"
+                    },
+                    {
+                        "name": "from-acl-opcua"
+                    },
+                    {
+                        "name": "from-acl-modbus-v6"
+                    },
+                    {
+                        "name": "from-acl-opcua-v6"
+                    }
+                ]
+            }
+        },
+        "to-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "to-acl-modbus"
+                    },
+                    {
+                        "name": "to-acl-opcua"
+                    },
+                    {
+                        "name": "to-acl-modbus-v6"
+                    },
+                    {
+                        "name": "to-acl-opcua-v6"
+                    }
+                ]
+            }
+        }
+    },
+    "ietf-access-control-list:acls": {
+        "acl": [
+            {
+                "name": "to-acl-modbus",
+                "type": "acl-1",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test2"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test3"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test4"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test5"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test6"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test7"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test8"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test9"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test10"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "to-acl-opcua",
+                "type": "acl-1",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test2"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test3"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test4"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test5"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test6"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test7"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test8"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test9"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test10"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "to-acl-modbus-v6",
+                "type": "acl-1",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test2"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test3"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test4"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test5"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test6"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test7"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test8"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test9"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test10"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "to-acl-opcua-v6",
+                "type": "acl-1",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test2"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test3"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test4"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test5"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test6"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test7"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test8"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test9"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test10"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+
+            {
+                "name": "from-acl-modbus",
+                "type": "acl-1",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test2"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test3"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test4"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test5"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test6"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test7"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test8"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test9"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test10"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "from-acl-opcua",
+                "type": "acl-1",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test2"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test3"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test4"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test5"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test6"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test7"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test8"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test9"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test10"
+                                },
+                                "ipv4": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "from-acl-modbus-v6",
+                "type": "acl-1",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test2"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test3"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test4"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test5"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test6"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test7"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test8"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test9"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test10"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 1000
+                                    }
+                                },
+                                "modbus": {
+                                    "disable-file-records": true,
+                                    "disable-fifo": true,
+                                    "disable-device-identification": true,
+                                    "disable-extensions": true
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "from-acl-opcua-v6",
+                "type": "acl-1",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test2"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test3"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test4"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test5"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test6"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test7"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test8"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test9"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-test-v6",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "rwth-aachen:comsys:evaluation:perf:mud:test10"
+                                },
+                                "ipv6": {},
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 2000
+                                    }
+                                },
+                                "opcua": {
+                                    "security-level": "high"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

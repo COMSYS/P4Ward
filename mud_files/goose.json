@@ -1,0 +1,65 @@
+{
+    "ietf-mud:mud": {
+        "mud-version": 1,
+        "mud-url": "https://comsys.rwth-aachen.de/security/goose/mud/goose-blocked-device-x.json",
+        "last-update": "2024-03-05T10:00:00+00:00",
+        "cache-validity": 48,
+        "is-supported": true,
+        "systeminfo": "Device X",
+        "controller-name": "rwth-aachen:comsys:evaluation:sec:goose:mud:device-x",
+        "extensions": [
+            "arp",
+            "goose"
+        ],
+        "from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "default-acl"
+                    }
+                ]
+            }
+        },
+        "to-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "default-acl"
+                    }
+                ]
+            }
+        }
+    },
+    "ietf-access-control-list:acls": {
+        "acl": [
+            {
+                "name": "default-acl",
+                "type": "default-acl",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "arp",
+                            "matches": {
+                                "arp": {}
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "goose",
+                            "matches": {
+                                "goose": {
+                                    "app-id": 20
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
